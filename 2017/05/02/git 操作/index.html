@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git常用操作 | 前端-倔小强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git 是什么？ 源代码管理器 Linux">
+<meta name="keywords" content="html, css, js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用操作">
+<meta property="og:url" content="http://yoursite.com/2017/05/02/git 操作/index.html">
+<meta property="og:site_name" content="前端-倔小强">
+<meta property="og:description" content="git 是什么？ 源代码管理器 Linux">
+<meta property="og:updated_time" content="2017-05-02T13:33:51.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git常用操作">
+<meta name="twitter:description" content="git 是什么？ 源代码管理器 Linux">
+  
+    <link rel="alternate" href="/atom.xml" title="前端-倔小强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">前端-倔小强</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="my blog-git 操作" class="article article-type-my blog" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/02/git 操作/" class="article-date">
+  <time datetime="2017-05-02T10:48:08.771Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git常用操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="git-是什么？"><a href="#git-是什么？" class="headerlink" title="git 是什么？"></a>git 是什么？</h5><ul>
+<li>源代码管理器 Linux<a id="more"></a>
+<h5 id="初始化仓储；"><a href="#初始化仓储；" class="headerlink" title="初始化仓储；"></a>初始化仓储；</h5></li>
+</ul>
+<ul>
+<li><code>git init</code> 初始化；</li>
+</ul>
+<h4 id="配置-用户名-密码；"><a href="#配置-用户名-密码；" class="headerlink" title="配置 用户名 密码；"></a>配置 用户名 密码；</h4><ul>
+<li>备份在 git文件里；<ul>
+<li>git config –global user.name “”;</li>
+<li>git config –global user.email “”</li>
+</ul>
+</li>
+</ul>
+<h5 id="代码放到仓库里；"><a href="#代码放到仓库里；" class="headerlink" title="代码放到仓库里；"></a>代码放到仓库里；</h5><pre><code>//工作区
+git add //放到大门口(暂存区)
+git commit //放到房间里； 全部放；// 版本库
+//说明
+git commit -m &apos;代码更新了&apos;；
+</code></pre><h4 id="vim-里面如何退出"><a href="#vim-里面如何退出" class="headerlink" title="vim 里面如何退出"></a>vim 里面如何退出</h4><pre><code>esc-&gt;:-&gt;q
+esc-&gt;:-&gt;q!
+</code></pre><h4 id="状态查看"><a href="#状态查看" class="headerlink" title="状态查看"></a>状态查看</h4><pre><code>git status
+</code></pre><h4 id="添加所有文件"><a href="#添加所有文件" class="headerlink" title="添加所有文件"></a>添加所有文件</h4><pre><code>git ./ 
+</code></pre><h4 id="直接加到版本库"><a href="#直接加到版本库" class="headerlink" title="直接加到版本库"></a>直接加到版本库</h4><pre><code>git commit --all -m &apos;all&apos;
+</code></pre><h4 id="设置忽略文件"><a href="#设置忽略文件" class="headerlink" title="设置忽略文件"></a>设置忽略文件</h4><pre><code>添加 .gitignore文件
+//添加过程；(直接写不出来。。)
+touch .gitignore
+</code></pre><h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><pre><code>git log
+git log 
+--oneline  //一行显示一条
+</code></pre><h4 id="版本回退；"><a href="#版本回退；" class="headerlink" title="版本回退；"></a>版本回退；</h4><ul>
+<li>git reset –hard Head~0 //往前回退一次；<br>  // 0表示索引；</li>
+<li><p>通过版本号回退</p>
+<pre><code>git reset --hard f48bad4 //版本号
+git reflog //看看所有操作；
+</code></pre></li>
+</ul>
+<h4 id="创建分支，合并，查看，合并；"><a href="#创建分支，合并，查看，合并；" class="headerlink" title="创建分支，合并，查看，合并；"></a>创建分支，合并，查看，合并；</h4><ul>
+<li>创建分支；<ul>
+<li>git branch dev1</li>
+</ul>
+</li>
+<li>查看分支,绿色是当前位置<ul>
+<li>git branch</li>
+</ul>
+</li>
+<li>切换分支；<ul>
+<li>git checkout dev1</li>
+<li>git checkout master</li>
+</ul>
+</li>
+<li>合并分支<ul>
+<li>git merge dev1 (切换到master 合并 dev1)</li>
+</ul>
+</li>
+</ul>
+<h4 id="处理冲突-（两个都修改-在合并的时候出现这个问题）"><a href="#处理冲突-（两个都修改-在合并的时候出现这个问题）" class="headerlink" title="处理冲突 （两个都修改,在合并的时候出现这个问题）"></a>处理冲突 （两个都修改,在合并的时候出现这个问题）</h4><pre><code>- 删除分支；git branch -d dev1 (切换到别的分支)
+-找到冲突的部分，删除，重新commit然后合并；
+</code></pre><h4 id="推送远端服务器"><a href="#推送远端服务器" class="headerlink" title="推送远端服务器"></a>推送远端服务器</h4><pre><code>- git push origin master
+</code></pre><h4 id="获取github上面的代码"><a href="#获取github上面的代码" class="headerlink" title="获取github上面的代码"></a>获取github上面的代码</h4><pre><code>-git clone &apos;&apos;
+</code></pre><h4 id="拉取远程服务器代码；"><a href="#拉取远程服务器代码；" class="headerlink" title="拉取远程服务器代码；"></a>拉取远程服务器代码；</h4><ul>
+<li>clone 上面都有都会取下来</li>
+<li>pull 只拉代码，不拉 .git</li>
+<li>第一次使用 clone；</li>
+<li>后面都用pull;<ul>
+<li>使用 clone，全部的代码包括里面的.git文件;</li>
+<li>如果使用 pull,是修改部分的代码；</li>
+</ul>
+</li>
+</ul>
+<h4 id="https-方式提交-vs-ssh方式提交；"><a href="#https-方式提交-vs-ssh方式提交；" class="headerlink" title="https 方式提交  vs ssh方式提交；"></a>https 方式提交  vs ssh方式提交；</h4><ul>
+<li>use https/ use ssh;</li>
+<li>ssh<ul>
+<li>生成文件 公钥 ，私钥  有关联</li>
+<li>私钥给自己，公钥给github(在github里面配置)</li>
+<li>生成公钥，私钥<ol>
+<li><code>ssh-keygen -t rsa -C &quot;js.rookie211@gmail.com&quot;</code></li>
+<li>默认位置，直接enter</li>
+<li>输入密码；  可以不设置；</li>
+<li>生成成功验证；</li>
+<li>打开用户下面的 id_rsa.pub复制，并贴到github setting 里面；</li>
+<li>然后ok。。。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="多账户操作获取代码时候，出现覆盖，冲突；"><a href="#多账户操作获取代码时候，出现覆盖，冲突；" class="headerlink" title="多账户操作获取代码时候，出现覆盖，冲突；"></a>多账户操作获取代码时候，出现覆盖，冲突；</h4><ul>
+<li>工作区在pull的时候，会被覆盖；</li>
+<li>在commit里面提交的时候，出现conflict；</li>
+</ul>
+<ul>
+<li><em>提交代码的时候，先pull后 push;</em></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/02/git 操作/" data-id="cj27lnmbg0000zcu9ed5pks96" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-css-js/">html, css, js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-js/">html, css, js</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/html-css-js/" style="font-size: 10px;">html, css, js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/02/git 操作/">git常用操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
