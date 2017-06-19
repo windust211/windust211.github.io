@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		list-style: none;
+		width:250px;
+		margin: 0 auto;
+		position: relative;
+	}
+	li{
+		width:48px;
+		height: 48px;
+		text-align: center;
+		border:1px #ccc solid;
+		line-height: 48px;
+		float:left;
+		font-size: 12px;
+	}
+	.fr{
+		float: right;
+	}
+	.on{
+		background:red;
+	}
+	.prize{
+		width: 136px;
+		height: 80px;
+		padding:0 6px;
+		position: absolute;
+		background:yellow;
+		line-height: 18px;
+		left:50px;
+		top:50px;
+		padding-top: 68px;
+		word-break: break-all;
+	}
+</style>
+<body>
+<ul>
+	<li class="on" title="回到起点，奖励100元">100元</li>
+	<li title="奖励50元话费">50元话费</li>
+	<li title="运气不错，奖励10元话费">10元话费</li>
+	<li title="手气不错，抽中一个6s">6s一个</li>
+	<li title="踩了狗屎，买彩票中了500万">500万</li>
+	<li title="自行车轮子被放气，花了10块钱修理">亏10块</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li class="fr" title="下路边残局，赢了50元">奖50元</li>
+	<li title="做公交过站，只能花20块钱，打车回去">亏20元</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li class="fr" title="天气变化，生病花了200">亏200</li>
+	<li title="工作努力，老板奖励现金2万">赚了2w</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li class="fr" title="又该交房租了，房租1000">亏1000</li>
+	<li title="出门遇见女神，心情轻松，工作效率增高，工资调高10块">赚10块</li>
+	<li title="玩游乐场，吓屎了，被罚款30">亏30</li>
+	<li title="请美女吃饭，花费250">亏250</li>
+	<li title="发新年红包，支出100">亏100</li>
+	<li class="fr" title="收到超大红包，得500">赚500</li>
+	<li class="prize">试试手气</li>
+</ul>
+</body>
+<script type="text/javascript">
+	var arr = [0,1,2,3,4,9,14,19,24,23,22,21,20,15,10,5];
+	var aLi = document.getElementsByTagName('li');
+	var oBtn = document.getElementsByClassName('prize')[0];
+	var timer = null;
+	var n=0;
+	var flag = true;
+	oBtn.onclick = function (){
+		if(!flag){return;}
+			flag = false;
+			var times = 0;
+			var that = this;
+			var randNum = Math.floor(Math.random()*arr.length)+1;
+			console.log(randNum)
+			timer = setInterval(function (){
+				aLi[arr[n]].className = '';
+				n++;
+				times++;
+			  n%=arr.length;
+				aLi[arr[n]].className = 'on';
+				if(times == randNum) {
+					flag = true;
+					that.innerHTML = aLi[arr[n]].title;
+					clearInterval(timer);
+				}
+		},100);
+		}
+
+
+</script>
+</html>

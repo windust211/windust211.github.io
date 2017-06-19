@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js兼容封装</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 工具方法
+		var tool = {
+			// 获取类
+			getByClass : function (sCls){
+				if(document.getElementsByClassName(sCls)){
+					return document.getElementsByClassName(sCls);
+				} else {
+					var eles = document.getElementsByTagName('*');
+					var objArr = [];
+					for(var i=0;i<eles.length;i++) {
+						var clsArr = eles[i].split(' ');
+						for(var j =0;j<clsArr.length;j++) {
+							if(clsArr[i] == sCls) {
+								objArr.push(eles[i]);
+							}
+						}
+					}
+					return objArr;
+				}
+			},
+			getText : function (obj){
+					return obj.innerText ? obj.innerText : obj.textContent;
+			},
+			getById : function (id){
+				return document.getElementById(id);
+			},
+			// 字符串去左右两边空格
+			toTrim :function (str){
+					return str.replace(/^\s+(\w+|\w+\s+\w)\s+$/g,'$1');
+					// return this.replace(/^\s+(\w+|\w+\s+\w)\s+$/,'$1');
+			},
+			// 事件对象兼容：
+			eventObj : function (e){
+				return e || window.event;
+			},
+			// srcElemet target
+			target : function (e){
+				return this.eventObj(e).srcElement || this.eventObj(e).target;
+			},
+			// 添加事件绑定；
+			bindEvent: {
+				addEvent : function (type,cb,isAsay){
+					if(window.addEventListener) {
+						//  isAsyn is false by default;
+						window.addEventListener(type,callback,isAsyn)
+					} else{
+						window.attachEvent('on' + type,callback,isAsyn)
+					}
+				},
+				removeEvent : function (type,cb){
+					if(window.addEventListener) {
+						//  isAsyn is false by default;
+						window.removeEventListener(type,callback)
+					} else{
+						window.detach('on' + type,callback)
+					}
+				},
+				// 事件代理封装
+				on : function (cur,target,type,fn){
+					cur['on'+type] = function (ev){
+						if(tools.target(ev).tagName === target.tagName) {
+							fn();
+						}
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

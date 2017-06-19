@@ -1,0 +1,48 @@
+[
+	{
+		"name" : "天使的翅膀",
+    "src" : "data/songs/天使的翅膀.mp3",
+    "lrc" : "data/lyric/天使的翅膀.lrc"
+
+  },
+  {
+  	"name" : "你爱我吗",
+  	"src" : "data/songs/你爱我吗.mp3",
+  	"lrc" : "data/lyric/你爱我吗.lrc"
+  },
+  {
+    "name" : "爱你",
+    "src" : "data/songs/爱你.mp3",
+    "lrc" : "data/lyric/爱你.lrc"
+  },
+  {
+    "name" : "123木头人",
+    "src" : "data/songs/123木头人.mp3",
+    "lrc" : "data/lyric/123木头人.lrc"
+  },
+  {
+    "name" : "爱笑的眼睛",
+    "src" : "data/songs/爱笑的眼睛.mp3",
+    "lrc" : "data/lyric/爱笑的眼睛.lrc"
+  },
+    {
+    "name" : "猜不透",
+    "src" : "data/songs/猜不透.mp3",
+    "lrc" : "data/lyric/猜不透.lrc"
+  },
+    {
+    "name" : "抽离",
+    "src" : "data/songs/抽离.mp3",
+    "lrc" : "data/lyric/抽离.lrc"
+  },
+    {
+    "name" : "客官不可以",
+    "src" : "data/songs/客官不可以.mp3",
+    "lrc" : "data/lyric/客官不可以.lrc"
+  },
+    {
+    "name" : "梦-徐良_阿悄",
+    "src" : "data/songs/梦-徐良_阿悄.mp3",
+    "lrc" : "data/lyric/梦-徐良_阿悄.lrc"
+  }
+]
