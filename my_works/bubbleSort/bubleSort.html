@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+			// 冒泡排序的封装；
+		// 封装这个方法；asc升序，des,降序
+		//默认升序，传入des降序；
+		var toSort = function (arr,order){
+				for(var i=0;i<arr.length-1;i++){
+							var flag = true;
+							for(var j=0;j<arr.length-1-i;j++){
+								if(order == 'des' && arr[j] < arr[j+1] ){
+									// 根据传入参数决定是降序排列，还是升序排列；
+											var temp = arr[j];
+											arr[j] = arr[j+1];
+											arr[j+1] = temp;
+											flag = false;
+								} else if(arr[j] > arr[j+1]) {
+											var temp = arr[j];
+											arr[j] = arr[j+1];
+											arr[j+1] = temp;
+											flag = false;
+								}
+							}
+						if(flag){
+							break;
+						}
+				}
+				return arr;
+		}
+
+	</script>
+</body>
+</html>

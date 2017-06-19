@@ -1,0 +1,35 @@
+html,body,div,p,ol,ul,li,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-size: 14px;
+}
+input{
+	outline: none;
+	border: none;
+}
+button{
+	outline: none
+}
+img{
+	border:none;
+}
+li{
+	list-style: none;
+}
+a{
+	color:#333;
+	text-decoration: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.rel{
+	position: relative;
+}
+.abs{
+	position: absolute;
+}
